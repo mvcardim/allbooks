@@ -13,9 +13,7 @@ server.use(bodyParser.json())
 server.use(jsonServer.defaults());
 
 const SECRET_KEY = '123456789'
-console.log("Boas-vindas ao AllBooks")
-console.log("Essa é uma API de uma loja de livros online")
-console.log("Acesse essa API em http://localhost:8000")
+
 
 
 function createToken(payload, expiresIn = '12h') {
@@ -368,7 +366,7 @@ https.createServer(
   cert: fs.readFileSync('server.crt')
 }, 
 server).listen(8000, () => {
-  console.log("API disponível em https://localhost:8000")
+  console.log("Acesse a API em https://localhost:8000")
 })
 
 
